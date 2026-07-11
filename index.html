@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>horror_04</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- CodePen HTML：貼到 HTML 欄位即可，不需要 <html>、<head>、<body> -->
+<div id="app" class="horror-app" data-phase="cover">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <section id="cover-page" class="screen cover-screen">
+    <div class="cover-card">
+      <div class="version-tag">horror_04_random_ghost</div>
+      <h1>精神認知與人格同步篩檢</h1>
+      <p class="subtitle">DEEP COGNITIVE EVALUATION PROTOCOL v4.5</p>
+      <p class="briefing">
+        本測驗將建立你的反應輪廓。請在安靜環境下完成，不要中途離開畫面。
+      </p>
+      <p class="privacy-note">
+        沉浸式恐怖演出：可選擇啟用前鏡頭做結局自拍驗證；不讀取 GPS、不上傳資料。相機畫面只在本機瀏覽器處理。
+      </p>
+
+      <div class="cover-actions">
+        <button id="start-btn" class="start-btn" type="button">允許相機並進入篩檢</button>
+        <button id="silent-btn" class="ghost-btn" type="button">靜音進入</button>
+      </div>
+
+      <p class="hint">Android / iOS 兼容版。建議戴耳機，但不要把音量開太大；本版加入一開始相機權限預備、四種人格結局、真結局演出、未知低頻音樂、心跳、靜電雜訊、瀏覽器故障感與隨機鬼影自拍。</p>
+
+      <section class="support-box" aria-label="自願支持">
+        <div class="support-title">給獵魔士喝酒錢</div>
+        <p class="support-text">
+          完整版免費體驗。<br>
+          如果你有被嚇到，可以自願支持 NT$10～50。<br>
+          LINE 收款碼會過期，所以請先加 LINE。
+        </p>
+        <div class="support-actions">
+          <a
+            class="support-btn line"
+            href="https://line.me/ti/p/T0z75ZIer2"
+            target="_blank"
+            rel="noopener"
+          >
+            LINE 給獵魔士喝酒錢
+          </a>
+        </div>
+        <p class="support-note">自願支持，不影響遊玩。你的支持會讓 horror_05 更不安靜。</p>
+      </section>
+    </div>
+  </section>
+
+  <main id="quiz-box" class="quiz-container" aria-live="polite">
+    <header class="hud">
+      <span id="device-label">DEVICE: UNKNOWN</span>
+      <span id="clock-label">00:00:00</span>
+      <button id="sound-toggle" class="sound-toggle" type="button" aria-label="切換音效">SOUND: ON</button>
+    </header>
+
+    <section class="profile-panel">
+      <div class="profile-title">人格檔案建立中</div>
+      <div class="profile-row">
+        <span>共鳴反應</span>
+        <b id="fear-val">00%</b>
+      </div>
+      <div class="profile-row">
+        <span>否認傾向</span>
+        <b id="denial-val">00%</b>
+      </div>
+      <div class="profile-row">
+        <span>邀請訊號</span>
+        <b id="invite-val">00%</b>
+      </div>
+      <div class="profile-row danger-row">
+        <span>人格污染</span>
+        <b id="corruption-val">00%</b>
+      </div>
+    </section>
+
+    <div class="progress-bar" aria-hidden="true">
+      <div id="progress" class="progress"></div>
+    </div>
+
+    <div id="system-log" class="system-log">系統初始化完成。等待受試者同意。</div>
+    <section id="quiz-content" class="quiz-content"></section>
+  </main>
+
+  <div id="screen-overlay" class="screen-overlay" aria-hidden="true">
+    <div id="overlay-text" class="overlay-text"></div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
